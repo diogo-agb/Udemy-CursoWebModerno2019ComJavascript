@@ -1,0 +1,26 @@
+<h1>Links</h1>
+
+<!-- URL Absoluta, não pode tirar o http -->
+<a id="inicio" href="https://www.google.com.br">Google 1</a><br>
+<a href="https://www.google.com.br" target="_blank">Google 2</a><br><br>
+
+<!-- URL Relativa, voltando as pastas e procurando o index.html -->
+<a href="index.html">Voltar 1</a><br>
+<a href="/index.html">Página inical</a><br>
+<a href="../index.html">Voltar 3</a><br><br>
+
+<!-- Link para e-mail, abre o app de mail padrão do usuario já com endereço de destino -->
+<a href="mailto:diogo.agb@gmail.com">Entre em contato</a><br><br>
+
+<!-- Link de âncora, não é uma boa prática, css inline, dentro da tag, usando a propriedade style -->
+<!-- Dessa forma o brownser vai navegar até noticia dentro da mesma página. -->
+<!-- Se voce estiver navegando na página que tiver uma ancora e fizer uma requisição ao servidor -->
+<!-- a ancora não será enviada ao backend -->
+<div id="noticia" style="position: absolute;top: 2000px;">
+    <h1>Notícia Bomba!!</h1>
+    <p>Não era nada...</p>
+    <a href="#inicio">Voltar para o início</a>
+</div>
+<a href="#noticia">Ir para notícia</a>
+
+

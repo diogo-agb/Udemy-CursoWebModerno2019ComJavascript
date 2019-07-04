@@ -5,13 +5,18 @@ const produtos = [
     {nome: 'Copo de plástico', preco: 18.99, fragil: false
 }]
 
-// const caro = p => p.preco > 500
-// const fragil = f => f.fragil
+const caro = p => p.preco > 500
+const fragil = f => f.fragil
+// const maisBarato = p => p.preco
+const menorPreco = s => s.preco.reduce(function(a, b){
+    return b < a
+})
 
 // console.log(produtos.filter(caro).filter(fragil))
+console.log(produtos.map(menorPreco))
 
 
 
-console.log(produtos.filter(function(e){
-    return e.nome == 'Copo'
-}))
+// console.log(produtos.filter(function(e){
+//     return e.nome == 'Copo'
+// }))

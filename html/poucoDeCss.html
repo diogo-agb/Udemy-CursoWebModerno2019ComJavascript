@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Um pouco de CSS</title>
+        <link rel="stylesheet" href="poucoDeCss.css">
+        
+        <!-- usando css em cima da tag h1 (elemento). E em cima de uma classe (classe em css começa com . ) .-->
+        <!-- e também o # representa um id. -->
+        <style>
+            h1 {
+                font-size: 20px;
+            }
+        
+            .fundoVermelho {
+                background-color: red;
+            }
+
+            .negrito {
+                font-weight: bold;
+            }
+
+            #textoPrincipal {
+                font-size: 40px;
+                font-weight: bold;
+                color: #fff;
+                padding: 10px;
+                background-color: #444;
+                margin-bottom: 50px;
+            }
+        </style>
+    </head>    
+    <body>
+        <h1>CSS</h1>
+        <span id="textoPrincipal">Texto 1</span><br><br><br> <!-- o br quebra a linha, mas não é muito usado hoje em dia. -->
+        <span class="fundoVermelho negrito">Texto 2</span><br><br>
+        <span class="fundoVermelho" wm-atrib>Texto 3</span> <!-- wm-atrib pode aplicar o seu próprio atributo. -->
+    </body>
+</html>
+
+<!-- Todas as tags do html possuem a propriedade id -->
+<!-- Uma Classe tbm é um identificador, para que vc possa aplicar um estilo sobre a classe -->
+<!-- Pode aplicar o css a partir ou em cima das tags ou id -->
