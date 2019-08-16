@@ -29,9 +29,9 @@ while (ferrari.getVelocidadeAtual() < 100){
     console.log(ferrari.getVelocidadeAtual())
 }
 
+
 console.log(typeof Carro)
 console.log(typeof ferrari)
-
 
 
 

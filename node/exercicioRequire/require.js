@@ -3,6 +3,6 @@
 
 const http = require('http')
 http.createServer((req, res) => {
-    res.write('Bom dia! Diogo. Mae. Cris. Diego')
+    res.write('Bom dia! Diogo.')
     res.end()
 }).listen(8080)
