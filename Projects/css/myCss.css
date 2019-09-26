@@ -1,0 +1,20 @@
+h1 {
+    color: greenyellow;
+}
+
+body {
+    background-color: skyblue;
+}
+
+p {
+    color: #f00;
+    font-size: 20px;
+    font-family: 'Lobster', cursive;
+}
+
+div {
+    background-color: crimson;
+    width: 200px;
+    height: 200px;
+}
+

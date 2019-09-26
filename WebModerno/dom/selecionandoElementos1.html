@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #01</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo">.terceiro .ultimo</div>
+    <script>              
+        document.getElementById('primeiro').classList.add('destaque')
+
+        const divs = document.getElementsByTagName('div')
+        
+        //  Transformando HTML list em array com Array.from
+        Array.from(divs).forEach(e => e.classList.remove('destaque'))
+        
+        const divsArray = [...divs] // Com o operador spread tambem podemos transforma HTML list em array
+        divsArray.forEach(e => e.classList.add('destaque'))
+
+        // Selecionando a partir da classe
+        const ultimosElementos = document.getElementsByClassName('ultimo')
+        
+        // Se não converter o HTML list em array, pode percorrer os itens com o for por ex: 
+        for (let e of ultimosElementos) {
+            e.classList.remove('destaque')
+        }
+
+
+    </script>
+</body>
+</html>

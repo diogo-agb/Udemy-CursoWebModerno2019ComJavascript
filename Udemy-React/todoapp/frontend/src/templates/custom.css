@@ -1,0 +1,37 @@
+.mynav { 
+    border-radius: 5px;
+    background: #000 !important;
+}
+
+.nav-link:hover {
+    color: #fff !important;
+}
+
+.navbar-brand {
+    color: #777 !important;
+}
+
+.navbar-brand:hover {
+    color: #fff !important;
+}
+
+.markedAsDone {
+    text-decoration: line-through;
+    color: #777;
+}
+
+.btn {
+    margin-right: 5px;
+}
+
+.tableActions {
+    width: 20rem;
+}
+
+.tableDescription {
+    width: 80rem;
+}
+
+.todoForm {
+    padding-bottom: 60px;
+}

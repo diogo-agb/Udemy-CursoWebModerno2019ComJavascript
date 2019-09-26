@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #02</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
+    <button onclick="select('div:nth-of-type(2)')" class="select">Select</button>
+    <button onclick="unselect('*')" class="unselect">Unselect</button>
+    <script>              
+        // document.querySelector('#primeiro').classList.add('destaque')
+
+        const select = selector => {
+            document.querySelectorAll(selector).forEach(e => e.classList.add('destaque'))
+        }
+        // select('div')
+
+        const unselect = selector => {
+            document.querySelectorAll(selector).forEach(e => e.classList.remove('destaque'))
+        }
+        // unselect('*')
+
+        // select('.terceiro.ultimo')        
+        // unselect('*')
+
+        // // Selecionando atraves de uma pseudo-classe e negando para um determinado seletor
+        // select(':not(#primeiro)')
+        // unselect('*')
+        
+        // select('body div:nth-child(2)')
+        // unselect('*')
+
+        // select('div:nth-of-type(2)')
+        // unselect('*')
+
+        // select('[wb-attrib]')
+        // unselect('*')
+
+        
+        
+
+
+    </script>
+</body>
+</html>
