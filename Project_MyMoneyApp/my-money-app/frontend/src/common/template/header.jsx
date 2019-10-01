@@ -13,4 +13,4 @@ export default props => (
             <a href className="sidebar-toggle" data-toggle="offcanvas"></a>
         </nav>
     </header>
-)
+);

@@ -7,4 +7,4 @@ export default props => (
             <Menu />
         </section>
     </aside>
-)
+);
