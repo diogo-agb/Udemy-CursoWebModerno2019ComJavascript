@@ -42,10 +42,6 @@ const Counter = props => {
 
 
 
-
-
-
-
 const mapStateToProps = state => ({ counter: state.counter, tag: state.tag });
 
 const mapDispatchToProps = dispatch => bindActionCreators({ inc }, dispatch);
