@@ -1,25 +1,36 @@
+
+/*Componente criado apenas para ilustrar como seria o controle de 
+estado do nosso componente sem usar o Redux
+para ativar basta modificar a rota para usar esse componente
+*/
+
 import React, { Component } from 'react';
 import Content from '../common/template/content';
 import ContentHeader from '../common/template/contentHeader';
 import ValueBox from '../common/widget/valueBox';
 import Row from '../common/layout/row';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { getSummary } from './dashboardActions';
+import axios from 'axios';
 
+const BASE_URL = 'http://localhost:3003/api';
 
-class Dashboard extends Component {
+export default class Dashboard2 extends Component {
+
+    constructor(props) {
+        super(props)
+        this.state = { credit: 0, debit: 0 }
+    };
 
     //Essa função é chamada sempre que o componente é renderizado
     componentWillMount() {
-        this.props.getSummary();
+        axios.get(`${BASE_URL}/billingCycles/summary`)
+            .then(resp => this.setState(resp.data))
     };
 
     render() {
-        const { credit, debt } = this.props.summary;
+        const { credit, debt } = this.state
         return (
             <div>
-                <ContentHeader title="Dashboard" small="Versão 1.0" />
+                <ContentHeader title="Dashboard" small="Versão 2.0 sem Redux" />
                 <Content>
                     <Row>
                         <ValueBox cols='12 4' color='green' icon='bank'
@@ -35,6 +46,3 @@ class Dashboard extends Component {
     }
 };
 
-const mapStateToProps = state => ({ summary: state.dashboard.summary });
-const mapDispatchToProps = dispatch => bindActionCreators({ getSummary }, dispatch);
-export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
